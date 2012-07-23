@@ -11,7 +11,7 @@ MANAGERS = ADMINS
 import dj_database_url
 DATABASES = {
     'default': 
-        dj_database_url.config(default=”sqlite:/blog_dev.db”)
+        dj_database_url.config(default=”sqlite:/verify_dev.db”)
         
 }
 
