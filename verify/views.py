@@ -10,4 +10,6 @@ from django.http import HttpResponseRedirect
 
 
 def home(request):
-	return render_to_response('verify/base.html',{})
+        print 'it works'
+        return HttpResponse('trialssss 1?') 
+	##return render_to_response('verify/base.html',{})
