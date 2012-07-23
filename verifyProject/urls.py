@@ -8,6 +8,8 @@ urlpatterns = patterns('',
     # Examples:
     # url(r'^$', 'verifyProject.views.home', name='home'),
     # url(r'^verifyProject/', include('verifyProject.foo.urls')),
+    url(r'^verify/', include('verify.urls')),
+
 
     # Uncomment the admin/doc line below to enable admin documentation:
     url(r'^admin/doc/', include('django.contrib.admindocs.urls')),
