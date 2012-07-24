@@ -1,4 +1,6 @@
 from django.conf.urls import patterns, include, url
+from django.conf import settings
+
 
 # Uncomment the next two lines to enable the admin:
 from django.contrib import admin
@@ -9,6 +11,7 @@ urlpatterns = patterns('',
     # url(r'^$', 'verifyProject.views.home', name='home'),
     # url(r'^verifyProject/', include('verifyProject.foo.urls')),
     url(r'^verify/', include('verify.urls')),
+    url(r'^verify/search/(?P<term>.*?)$', 'verify.views.search'),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:
@@ -16,4 +19,9 @@ urlpatterns = patterns('',
 
     # Uncomment the next line to enable the admin:
     url(r'^admin/', include(admin.site.urls)),
+    
+    url(r'^static/(?P<path>.*)$', 'django.views.static.serve', {
+        'document_root' : settings.STATIC_ROOT,
+    }),
+
 )
