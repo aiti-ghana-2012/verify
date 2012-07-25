@@ -105,9 +105,9 @@
 
 {%if exist == 'False'%}
 
-{{search_product}} is not registered or Check spelling and try again
+{{search_product}} is not registered or check spelling and try again
 </br>
-Report to Food and Drugs Board
+
 
 {%endif%}
 
