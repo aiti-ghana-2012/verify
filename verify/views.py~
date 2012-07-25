@@ -7,6 +7,8 @@ from django.forms import ModelForm
 from django import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
+from verify.models import Product
+
 
 class searchForm(forms.Form):
     search_product = forms.CharField()
@@ -21,16 +23,20 @@ def search(request,term):
         search_product=request.POST.get('search_product')
         print search_product
         posts =Product.objects.filter(name__icontains= search_product)
-
-    	
+        for item in posts:
+        	print type(item.description)
+            
     
     	argument = 'verify/search.html/'
     	
         t = loader.get_template(argument)
-        c = Context({'posts':posts,'term':term, 'search_product':search_product, 'name1':name1})
+        c = Context({'posts':posts,'term':term, 'search_product':search_product})
 
         return HttpResponse(t.render(c))
         
+        
+        
+
 
         
 
