@@ -61,9 +61,9 @@
             <div class="controls">
 
               <div class="input-append">
-                <input class="span5" id='appendedInputButtont' size="1" type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
+                <input class="span5" id='appendedInputButton' size="1" type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
                 
- 
+   
 
 
 {%block content%}
@@ -74,7 +74,33 @@
 
 </p>
 <p>
-	{%if posts.dosage_form == ''%}
+	
+</p>
+
+{%endblock%}
+
+
+  
+
+ </p>
+
+  <!-- Example row of columns -->
+      <div class="row">
+        <div>
+          <h2></h2>
+           <p>
+		
+		
+
+		</div>
+
+
+      <footer>
+
+
+<div class="hero-unit">
+        <h5>Verify Product Info !</h5>
+        	{%if posts.dosage_form == ''%}
 	{{posts.product_name}}
 	{{posts.FDB_number}}
 	{%else%}
@@ -86,14 +112,7 @@
 	{{posts.local_agent}}
 	{{posts.expiry_date}}
 	{%endif%}
-</p>
-
-{%endblock%}
-
-
-      <footer>
-
-
+      </div>
 
 
 

@@ -23,7 +23,7 @@ def search(request,term):
         search_product=request.POST.get('search_product').lower()
         if (search_product==''):
         	if (request.path=="/verify/search/"):
-			request.path='verify/search.html/'
+			request.path='verify/base.html/'
 			print request.path
 			return render_to_response(request.path,{})
         else:
