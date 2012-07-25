@@ -1043,7 +1043,7 @@ input.span5,
 textarea.span5,
 .uneditable-input.span5 {
   width: 370px;
-  height:29px
+  height:28px
 }
 
 input.span4,
@@ -4940,6 +4940,7 @@ a.badge:hover {
 }
 
 .hero-unit {
+  padding-top: 10px;
   padding: 60px;
   margin-bottom: 30px;
   background-color: #eeeeee;
