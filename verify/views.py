@@ -8,6 +8,7 @@ from django import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
 from verify.models import Product
+from django.core.exceptions import ObjectDoesNotExist
 
 
 class searchForm(forms.Form):
@@ -26,13 +27,34 @@ def search(request,term):
 			request.path='verify/base.html/'
 			print request.path
 			return render_to_response(request.path,{})
+		"""else:
+		    print request.path
+		    request.path='/verify/search/'
+		    print "fjhjhgjhgv"
+		    print request.path*2
+		    return render_to_response(request.path,{})"""
         else:
-		print search_product
-		posts =Product.objects.get(product_name__iexact= search_product)
-	       	argument = 'verify/search.html/'
-		t = loader.get_template(argument)
-		c = Context({'posts':posts,'term':term, 'search_product':search_product})
-		return HttpResponse(t.render(c))
+		try:		
+			posts =Product.objects.get(product_name__iexact= search_product)
+			argument = 'verify/search.html/'
+			exist=True
+			t = loader.get_template(argument)
+			c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
+			return HttpResponse(t.render(c))
+			
+		except Product.DoesNotExist:
+  			print 'asdfsadasdfsadasdfsadasdfsadasdfsadasdfsadasdfsadasdfsadasdfsad'
+  			argument = 'verify/search.html/'
+			t = loader.get_template(argument)
+			exist=False
+			c = Context({'term':term, 'search_product':search_product,'exist':exist})
+			return HttpResponse(t.render(c))
+  			
+
+		
+			
+		
+		
         
         
         
