@@ -22,7 +22,7 @@ def home(request):
 def search(request,term):
         search_product=request.POST.get('search_product')
         print search_product
-        posts =Product.objects.get(name__icontains= search_product)
+        posts =Product.objects.get(product_name= search_product)
         
             
     

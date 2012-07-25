@@ -1,7 +1,9 @@
 <html>
 	<head>
 		<meta charset="utf-8">
-    <title>Very-Fi</title>
+    <link rel="icon" href="/static/bootstrap/img/favicon.ico"  sizes="16x16" />
+    <title>eryFi</title>
+    
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <meta name="author" content="">
@@ -92,7 +94,7 @@
             <div class="controls">
 
               <div class="input-append">
-                <center><input class="span5" id="appendedInputButton" size="1" type="text"><button class="btn btn-primary " input type="submit" value="Submit" >VeryFi!</button></center></form>
+                <center><input class="span5" id="appendedInputButton" size="1" type="text" placeholder="Search_product" name="search_product"><button class="btn btn-primary " input type="submit" value="Submit" >VeryFi!</button></center></form>
       <br />
 	
                 	<br />
