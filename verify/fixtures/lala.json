@@ -1,0 +1,639 @@
+[
+{
+"model":"verify.product",
+"pk": 1,
+"fields": {
+"product_name": "Benny Powder Chicken Stock",
+"FDB_number": "FDB/Ad 00-012",
+"manu_location": "Mirasey Enterprise, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 2,
+"fields": {
+"product_name": "Ajinomoto - MSG",
+"FDB_number": "FDB/Ad 02-001",
+"manu_location": "Zorkum Co. Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 3,
+"fields": {
+"product_name": "Yadak Spice (Black Pepper)",
+"FDB_number": "FDB/Ad 02-002",
+"manu_location": "Yadak Farms, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 4,
+"fields": {
+"product_name": "All Gold Tomato Sauce",
+"FDB_number": "FDB/Ad 02-003",
+"manu_location": "Naomi Eyifah Enterprise, Kumasi",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 5,
+"fields": {
+"product_name": "Pearl River Bridge Superior Dark Soy Sauce",
+"FDB_number": "FDB/Ad 02-005",
+"manu_location": "Index Link Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 6,
+"fields": {
+"product_name": "Benny Instant Stock Powder (Beef, Crevette & Mchuzu)",
+"FDB_number": "FDB/Ad 03-001",
+"manu_location": "Mirasey Enterprise, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 7,
+"fields": {
+"product_name": "Gino MSG",
+"FDB_number": "FDB/Ad 03-002",
+"manu_location": "Prince Yaw Damoah Ent",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 8,
+"fields": {
+"product_name": "Yaaji Exotic Mixed Spices",
+"FDB_number": "FDB/Ad 03-003",
+"manu_location": "Shalams Enterprise, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 9,
+"fields": {
+"product_name": "Ajinomoto - MSG",
+"FDB_number": "FDB/Ad 03-004",
+"manu_location": "SDTM Ghana Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 10,
+"fields": {
+"product_name": "So Bi Hwe Iodated Salt",
+"FDB_number": "FDB/Ad 03-005",
+"manu_location": "Hannah Nyamekye Ent., Kumasi",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 11,
+"fields": {
+"product_name": "Fun-MSG",
+"FDB_number": "FDB/Ad 03-006",
+"manu_location": "Tomato Trading Co. Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 12,
+"fields": {
+"product_name": "Amoy Sauces (Light Soy, Dark Soy, Gold Label Dark Soy, Chili, Chili & Garlic, Premium Oyster)",
+"FDB_number": "FDB/Ad 03-007",
+"manu_location": "Kwatsons (Gh) Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 13,
+"fields": {
+"product_name": "Triton Curry Powder",
+"FDB_number": "FDB/Ad 03-008",
+"manu_location": "Naomi Eyifah Enterprise, Kumasi",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 14,
+"fields": {
+"product_name": "Super Seasonoing A-One",
+"FDB_number": "FDB/Ad 03-009",
+"manu_location": "Zakpa Company Ltd",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 15,
+"fields": {
+"product_name": "KSL Group - White Sugar",
+"FDB_number": "FDB/Ad 03-010",
+"manu_location": "Olam Ghana Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 16,
+"fields": {
+"product_name": "Knorr Aromat Seasoning",
+"FDB_number": "FDB/Ad 03-011",
+"manu_location": "Unilever Ghana Ltd., Tema",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 17,
+"fields": {
+"product_name": "Joecarl Pepper Sauce",
+"FDB_number": "FDB/Ad 03-013",
+"manu_location": "Joecarl Enterprises Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 18,
+"fields": {
+"product_name": "Maggi Shito",
+"FDB_number": "FDB/Ad 03-014",
+"manu_location": "Nestle Ghana Limited, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 19,
+"fields": {
+"product_name": "Rymaccob Shito (Pepper Sauce)",
+"FDB_number": "FDB/Ad 03-015",
+"manu_location": "Rymaccob Enterprise, Takoradi",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 20,
+"fields": {
+"product_name": "Foster Clark's Culinary Essence (Banana, Vanilla, Pineapple, Strawberry)",
+"FDB_number": "FDB/Ad 03-017",
+"manu_location": "Forewin Ghana Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 21,
+"fields": {
+"product_name": "Weikfield Baking Powder",
+"FDB_number": "FDB/Ad 03-018",
+"manu_location": "Far East Mercantile Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 22,
+"fields": {
+"product_name": "Midams Shito",
+"FDB_number": "FDB/Ad 03-037",
+"manu_location": "Midams Enterprise, Teshie Nungua",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 23,
+"fields": {
+"product_name": "Robertson's Spices (Cayene Pepper, Barbecue, Mixed Herbs)",
+"FDB_number": "FDB/Ad 04-001",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 24,
+"fields": {
+"product_name": "Maggi Rich Beef Soup (Halaal)",
+"FDB_number": "FDB/Ad 04-002",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 25,
+"fields": {
+"product_name": "Marmite Yeast Extract",
+"FDB_number": "FDB/Ad 04-003",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 26,
+"fields": {
+"product_name": "Robertson's Spices (White Pepper, Black Pepper)",
+"FDB_number": "FDB/Ad 04-004",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 27,
+"fields": {
+"product_name": "Rajah Curry Powder (Hot, Hot-Fort)",
+"FDB_number": "FDB/Ad 04-005",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 28,
+"fields": {
+"product_name": "Mrs. H. S. Ball's Chutney (Hot, Original Recipe)",
+"FDB_number": "FDB/Ad 04-006",
+"manu_location": "Shop Best  Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 29,
+"fields": {
+"product_name": "A-One Monosodium Glutamate Super Seasoning",
+"FDB_number": "FDB/Ad 04-007",
+"manu_location": "Mawuli Kekeli Enterprise, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 30,
+"fields": {
+"product_name": "African Cayenne Pepper",
+"FDB_number": "FDB/Ad 04-008",
+"manu_location": "Augustina Abu Ent., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 31,
+"fields": {
+"product_name": "Concord Iodated Salt",
+"FDB_number": "FDB/Ad 04-009",
+"manu_location": "Superlock Technologies Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 32,
+"fields": {
+"product_name": "Fungamyl 2500 SG (Enzyme)",
+"FDB_number": "FDB/Ad 04-010",
+"manu_location": "Wacroft Marketing Ent., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 33,
+"fields": {
+"product_name": "Fungamyl Super MA (Enzyme)",
+"FDB_number": "FDB/Ad 04-011",
+"manu_location": "Wacroft Marketing Ent., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 34,
+"fields": {
+"product_name": "Novamyl 1500 MG (Enzyme)",
+"FDB_number": "FDB/Ad 04-012",
+"manu_location": "Wacroft Marketing Ent., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 35,
+"fields": {
+"product_name": "Esamyl (Enzyme)",
+"FDB_number": "FDB/Ad 04-013",
+"manu_location": "Wacroft Marketing Ent., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 36,
+"fields": {
+"product_name": "Pakmaya Yeast",
+"FDB_number": "FDB/Ad 04-014",
+"manu_location": "Forewin Ghana Ltd, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 37,
+"fields": {
+"product_name": "Shady Maple Farms Maple Syrup",
+"FDB_number": "FDB/Ad 04-015",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 38,
+"fields": {
+"product_name": "Healthrite Cider Vinegar",
+"FDB_number": "FDB/Ad 04-016",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 39,
+"fields": {
+"product_name": "Martlet Cider Honegar",
+"FDB_number": "FDB/Ad 04-017",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 40,
+"fields": {
+"product_name": "Healthrite Crude Black Strap Molasses",
+"FDB_number": "FDB/Ad 04-018",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 41,
+"fields": {
+"product_name": "Apple Fords Molasses",
+"FDB_number": "FDB/Ad 04-019",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 42,
+"fields": {
+"product_name": "Billington's Unrefined Molasses Cane Sugar",
+"FDB_number": "FDB/Ad 04-020",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 43,
+"fields": {
+"product_name": "Vecon Vegetable Stock",
+"FDB_number": "FDB/Ad 04-021",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 44,
+"fields": {
+"product_name": "Vessen Yeast Pate With Mushrooms",
+"FDB_number": "FDB/Ad 04-022",
+"manu_location": "Relish Company Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 45,
+"fields": {
+"product_name": "Lina Iodated Salt",
+"FDB_number": "FDB/Ad 04-023",
+"manu_location": "Wealth Ghana Ltd, Weija, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 46,
+"fields": {
+"product_name": "Maggi Arome (Cold Sauces/ Seasoning)",
+"FDB_number": "FDB/Ad 04-024",
+"manu_location": "Nestle Ghana Limited, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 47,
+"fields": {
+"product_name": "Maggi Regular Culinary",
+"FDB_number": "FDB/Ad 04-025",
+"manu_location": "Nestle Ghana Limited, Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 48,
+"fields": {
+"product_name": "Weikfield Baking Powder",
+"FDB_number": "FDB/Ad 04-026",
+"manu_location": "Kenashmi (Gh) Ltd., Accra",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+},
+{
+"model":"verify.product",
+"pk": 49,
+"fields": {
+"product_name": "Tropicana Pepper Paste",
+"FDB_number": "FDB/Ad 04-027",
+"manu_location": "A. Panford & Sons Ltd., Takoradi",
+"strength":"",
+"dosage_form":"",
+"local_agent":"",
+"expiry_date":""
+}
+}
+]

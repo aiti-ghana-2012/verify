@@ -22,10 +22,13 @@ def home(request):
 def search(request,term):
         search_product=request.POST.get('search_product').lower()
         if (search_product==''):
-        	return render_to_response('verify/base.html',{})
+        	if (request.path=="/verify/search/"):
+			request.path='verify/search.html/'
+			print request.path
+			return render_to_response(request.path,{})
         else:
 		print search_product
-		posts =Product.objects.get(product_name= search_product)
+		posts =Product.objects.get(product_name__iexact= search_product)
 	       	argument = 'verify/search.html/'
 		t = loader.get_template(argument)
 		c = Context({'posts':posts,'term':term, 'search_product':search_product})
