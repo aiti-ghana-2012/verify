@@ -1043,7 +1043,7 @@ input.span5,
 textarea.span5,
 .uneditable-input.span5 {
   width: 370px;
-  height:28px
+  height:29px
 }
 
 input.span4,

@@ -61,7 +61,7 @@
             <div class="controls">
 
               <div class="input-append">
-                <input class="span5" id='appendedInputButton' size="1" type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
+                <input class="span5" id='appendedInputButton' size="1" "height=50px width=400px type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
                 
    
 
@@ -110,8 +110,19 @@
 	Search Results for : {{search_product}}	   
     </div> <!-- /container -->
 <div class="hero-unit">
-        <h5>Verify Product Info !</h5>
-        {%if posts.dosage_form == ''%}
+        <h5>Verify Product Details</h5>
+        
+
+{%if exist == 'False'%}
+
+Product Name:	{{search_product}} is not registered
+</br>
+Report to Food and Drugs Board
+
+{%endif%}
+
+
+{%if posts.dosage_form == ''%}
 	Product name	{{posts.product_name}}
 	</br>
 	FDB number:	{{posts.FDB_number}}
