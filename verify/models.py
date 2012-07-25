@@ -3,12 +3,12 @@ from django.contrib import admin
 
 class Product(models.Model):
 	product_name = models.CharField(max_length=60)
-	FDB_number = models.CharField(max_length=15)
-	manu_location = models.CharField(max_length=100)
-	strength = models.CharField(max_length=30)
-	dosage_form = models.CharField(max_length=30)
-	local_agent = models.CharField(max_length=100)
-	expiry_date = models.DateField()
+	FDB_number = models.CharField(max_length=15,blank=True)
+	manu_location = models.CharField(max_length=100,blank=True)
+	strength = models.CharField(max_length=30,blank=True)
+	dosage_form = models.CharField(max_length=30,blank=True)
+	local_agent = models.CharField(max_length=100,blank=True)
+	expiry_date = models.DateField(blank=True)
 	
 	
 	def __unicode__(self):

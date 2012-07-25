@@ -61,7 +61,7 @@
             <div class="controls">
 
               <div class="input-append">
-                <input class="span5" id="appendedInputButton" size="1" type="text"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
+                <input class="span5" id='appendedInputButtont' size="1" type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">VeryFi!</button></form>
                 
  
 
@@ -73,8 +73,20 @@
      
 
 </p>
-	{{posts.description}}
-
+<p>
+	{%if posts.dosage_form == ''%}
+	{{posts.product_name}}
+	{{posts.FDB_number}}
+	{%else%}
+	{{posts.product_name}}
+	{{posts.FDB_number }}
+	{{posts.manu_location}}
+	{{posts.strength}}
+	{{posts.dosage_form}}
+	{{posts.local_agent}}
+	{{posts.expiry_date}}
+	{%endif%}
+</p>
 
 {%endblock%}
 
