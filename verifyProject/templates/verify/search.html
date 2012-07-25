@@ -69,7 +69,7 @@
 {%block content%}
 </br>
 <p>
-	Search Results for : {{search_product}}
+	
      
 
 </p>
@@ -107,13 +107,14 @@
         <!-- /container <p>&copy; Moses Obeng 2012</p>-->
       </footer>
 
-		   
+	Search Results for : {{search_product}}	   
     </div> <!-- /container -->
 <div class="hero-unit">
         <h5>Verify Product Info !</h5>
-        	{%if posts.dosage_form == ''%}
-	{{posts.product_name}}
-	{{posts.FDB_number}}
+        {%if posts.dosage_form == ''%}
+	Product name	{{posts.product_name}}
+	</br>
+	FDB number:	{{posts.FDB_number}}
 	{%else%}
 	{{posts.product_name}}
 	{{posts.FDB_number }}

@@ -98,21 +98,6 @@
       <footer>
 
 
-<div class="hero-unit">
-        <h5>Verify Product Info !</h5>
-        	{%if posts.dosage_form == ''%}
-	{{posts.product_name}}
-	{{posts.FDB_number}}
-	{%else%}
-	{{posts.product_name}}
-	{{posts.FDB_number }}
-	{{posts.manu_location}}
-	{{posts.strength}}
-	{{posts.dosage_form}}
-	{{posts.local_agent}}
-	{{posts.expiry_date}}
-	{%endif%}
-      </div>
 
 
 
@@ -124,6 +109,23 @@
 
 		   
     </div> <!-- /container -->
+<div class="hero-unit">
+        <h5>Verify Product Info !</h5>
+        {%if posts.dosage_form == ''%}
+	Product name	{{posts.product_name}}
+	</br>
+	FDB number:	{{posts.FDB_number}}
+	{%else%}
+	{{posts.product_name}}
+	{{posts.FDB_number }}
+	{{posts.manu_location}}
+	{{posts.strength}}
+	{{posts.dosage_form}}
+	{{posts.local_agent}}
+	{{posts.expiry_date}}
+	{%endif%}
+      </div>
+
 
     <!-- Le javascript
     ================================================== -->
