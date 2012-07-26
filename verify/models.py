@@ -2,8 +2,8 @@ from django.db import models
 from django.contrib import admin
 
 class Drug(models.Model):
-	product_name = models.CharField(max_length=60)
-	Generic_name = models.CharField(max_length=100,blank=True)
+	product_name = models.CharField(max_length=300)
+	Generic_name = models.CharField(max_length=300,blank=True)
 	strength = models.CharField(max_length=30,blank=True)
 	dosage_form = models.CharField(max_length=30,blank=True)
 	applicant= models.CharField(max_length=100,blank=True)
