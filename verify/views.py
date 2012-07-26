@@ -2,12 +2,12 @@ from django.shortcuts import redirect
 from django.template import Context, loader
 from django.http import HttpResponse
 from django.shortcuts import render_to_response
-from models import Product 
+from models import Drug ,Food_water 
 from django.forms import ModelForm
 from django import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
-from verify.models import Product
+from verify.models import Drug ,Food_water
 from django.core.exceptions import ObjectDoesNotExist
 
 

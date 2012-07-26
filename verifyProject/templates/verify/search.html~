@@ -43,7 +43,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="#">VeryFi</a>
+          <a class="brand" href="1">VeryFi</a>
           <div class="btn-group pull-right"></div>        
          
           <div class="nav-collapse">
@@ -106,7 +106,7 @@
 {%if exist == 'False'%}
 
 <b style="color:#FF66FF">{{search_product}} </b>
-Maybe <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelling and try again
+May be <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelling and try again
 </br>
 
 

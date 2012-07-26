@@ -1,0 +1,23 @@
+Achievements:
+-Project Started and Models Created (Mon 23/07)
+-Templates, Views and URLs created (Tues 24/07)
+-Database Populated With Food and Water Products (Wed 25/07)
+-Querying with product names (Wed 25/07)
+-Interface redesigned (Wed 25/07)
+-System Working with all execptions covered (e.g. case sensitivty,null search, wrong inputs) (Wed 25/07)
+-Web System Up and Running on local host (Wed 25/07)
+-System has been tested for bugs (e.g. stress testing) (Wed 25/07)
+-
+
+
+
+Next Steps (to be Achieved on Thursday 26/07)
+-Database to be populated with drugs
+-Web application to be pushed to heroku
+-Making the System an SMS-based one 
+
+
+
+
+
+ 

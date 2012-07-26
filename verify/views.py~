@@ -7,7 +7,7 @@ from django.forms import ModelForm
 from django import forms
 from django.views.decorators.csrf import csrf_exempt
 from django.http import HttpResponseRedirect
-from verify.models import Product
+from verify.models import Drug ,Food_water
 from django.core.exceptions import ObjectDoesNotExist
 
 
@@ -37,14 +37,14 @@ def search(request,term):
 			try:		
 				posts =Product.objects.get(product_name__iexact= search_product)
 				argument = 'verify/search.html/'
-				exist=True
+				exist='True'
 				t = loader.get_template(argument)
 				c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
 				return HttpResponse(t.render(c))
 			except Product.DoesNotExist:
 	  			argument = 'verify/search.html/'
 				t = loader.get_template(argument)
-				exist=False
+				exist='False'
 				c = Context({'term':term, 'search_product':search_product,'exist':exist})
 				return HttpResponse(t.render(c))
 	  			
