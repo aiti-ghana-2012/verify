@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -43,7 +44,7 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </a>
-          <a class="brand" href="1">VeryFi</a>
+          <a class="brand" href="#">VeryFi</a>
           <div class="btn-group pull-right"></div>        
          
           <div class="nav-collapse">
@@ -114,19 +115,28 @@ May be <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelli
 
 
 {%if posts.dosage_form == ''%}
-	Product name	{{posts.product_name}}
+	Product name :<h3 style="color:#FF66FF">	{{posts.product_name}}</h3>
 	</br>
-	FDB number:	{{posts.FDB_number}}
+	FDB number:&nbsp;&nbsp;&nbsp; <b style="color:#FF66FF">	{{posts.FDB_number}} </b>
 	</br>
-	Manufacturer:  {{posts.manu_location}}
+	Manufacturer: &nbsp;&nbsp; {{posts.manu_location}}
 	{%else%}
 	{{posts.product_name}}
-	{{posts.FDB_number }}
-	{{posts.manu_location}}
-	{{posts.strength}}
-	{{posts.dosage_form}}
-	{{posts.local_agent}}
+	</br>
+	{{posts.Generic_name}}
+	</br>
+	{{posts.strength}} 
+	</br>
+	{{posts.dosage_form}} 
+	</br>
+	{{posts.applicant}}
+	</br>
+	{{posts.manufacturer}} 
+	</br>
+	{{posts.local_agent}} 
+	</br>
 	{{posts.expiry_date}}
+	
 	{%endif%}
      
  </div>  

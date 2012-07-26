@@ -34,19 +34,29 @@ def search(request,term):
 		    print request.path*2
 		    return render_to_response(request.path,{})"""
         else:
+			
 			try:		
-				posts =Product.objects.get(product_name__iexact= search_product)
+				posts =Food_water.objects.get(product_name__iexact= search_product)
 				argument = 'verify/search.html/'
 				exist='True'
 				t = loader.get_template(argument)
 				c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
 				return HttpResponse(t.render(c))
-			except Product.DoesNotExist:
-	  			argument = 'verify/search.html/'
-				t = loader.get_template(argument)
-				exist='False'
-				c = Context({'term':term, 'search_product':search_product,'exist':exist})
-				return HttpResponse(t.render(c))
+				
+			except Food_water.DoesNotExist:
+	  			try:		
+					posts =Drug.objects.get(product_name__iexact= search_product)
+					argument = 'verify/search.html/'
+					exist='True'
+					t = loader.get_template(argument)
+					c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
+				except Drug.DoesNotExist:
+		  			argument = 'verify/search.html/'
+					t = loader.get_template(argument)
+					exist='False'
+					c = Context({'term':term, 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
 	  			
 
 		

@@ -1,3 +1,4 @@
+
 <html>
 	<head>
 		<meta charset="utf-8">
@@ -114,19 +115,28 @@ May be <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelli
 
 
 {%if posts.dosage_form == ''%}
-	Product name	{{posts.product_name}}
+	Product name :<h3 style="color:#FF66FF">	{{posts.product_name}}</h3>
 	</br>
-	FDB number:	{{posts.FDB_number}}
+	FDB number:&nbsp;&nbsp;&nbsp; <b style="color:#FF66FF">	{{posts.FDB_number}} </b>
 	</br>
-	Manufacturer:  {{posts.manu_location}}
+	Manufacturer: &nbsp;&nbsp; {{posts.manu_location}}
 	{%else%}
-	{{posts.product_name}}
-	{{posts.FDB_number }}
-	{{posts.manu_location}}
-	{{posts.strength}}
-	{{posts.dosage_form}}
-	{{posts.local_agent}}
-	{{posts.expiry_date}}
+	Drug Name:<h3 style="color:#FF66FF">{{posts.product_name}}</h3>
+	</br>
+	Generic:{{posts.Generic_name}}
+	</br>
+	Strength:{{posts.strength}} 
+	</br>
+	Dosage:{{posts.dosage_form}} 
+	</br>
+	Applicant:{{posts.applicant}}
+	</br>
+	Manufacturer:{{posts.manufacturer}} 
+	</br>
+	Local Agent:{{posts.local_agent}} 
+	</br>
+	Expiry Date:{{posts.expiry_date}}
+	
 	{%endif%}
      
  </div>  
