@@ -13,6 +13,8 @@ class Product(models.Model):
 	
 	def __unicode__(self):
 		return self.product_name
-
-admin.site.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display=('product_name','FDB_number','manu_location','strength')
+    list_filter=('product_name','FDB_number')
+admin.site.register(Product,ProductAdmin)
 

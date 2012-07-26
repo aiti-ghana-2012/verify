@@ -8,11 +8,13 @@ class Product(models.Model):
 	strength = models.CharField(max_length=30,blank=True)
 	dosage_form = models.CharField(max_length=30,blank=True)
 	local_agent = models.CharField(max_length=100,blank=True)
-	expiry_date = models.DateField(blank=True)
+	expiry_date = models.CharField(max_length=100,blank=True)
 	
 	
 	def __unicode__(self):
 		return self.product_name
-
-admin.site.register(Product)
+class ProductAdmin(admin.ModelAdmin):
+    list_display=('product_name','FDB_number','manu_location','strength')
+    list_filter=('product_name'sup ,'FDB_number')
+admin.site.register(Product,ProductAdmin)
 

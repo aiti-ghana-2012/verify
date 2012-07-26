@@ -105,7 +105,8 @@
 
 {%if exist == 'False'%}
 
-{{search_product}} is not registered or check spelling and try again
+<b style="color:#FF66FF">{{search_product}} </b>
+May be <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelling and try again
 </br>
 
 
@@ -116,6 +117,8 @@
 	Product name	{{posts.product_name}}
 	</br>
 	FDB number:	{{posts.FDB_number}}
+	</br>
+	Manufacturer:  {{posts.manu_location}}
 	{%else%}
 	{{posts.product_name}}
 	{{posts.FDB_number }}

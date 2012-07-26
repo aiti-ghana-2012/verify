@@ -64,7 +64,7 @@
           <div class="controls">
 
               <div class="input-append">
-                <input class="span5" id='appendedInputButton' size="1" "height=50px width=400px type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">        &nbsp; &nbsp; &nbsp;<i class="icon-search"></i>&nbsp; &nbsp; &nbsp</button></form>
+                <input class="span5" id='appendedInputButton' size="1" "height=50px width=400px type="text"name="search_product"><button class="btn btn-primary " input type="submit" value="Submit">        &nbsp; &nbsp; &nbsp;<i class="icon-ok"></i>&nbsp; &nbsp; &nbsp</button></form>
                 
    
 
@@ -105,7 +105,8 @@
 
 {%if exist == 'False'%}
 
-{{search_product}} is not registered or check spelling and try again
+<b style="color:#FF66FF">{{search_product}} </b>
+Maybe <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelling and try again
 </br>
 
 
@@ -116,6 +117,8 @@
 	Product name	{{posts.product_name}}
 	</br>
 	FDB number:	{{posts.FDB_number}}
+	</br>
+	Manufacturer:  {{posts.manu_location}}
 	{%else%}
 	{{posts.product_name}}
 	{{posts.FDB_number }}
