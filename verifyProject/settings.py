@@ -1,4 +1,5 @@
 # Django settings for verifyProject project.
+#import south
 import os
 SITE_ROOT = os.path.dirname(os.path.realpath(__file__))
 
@@ -124,12 +125,19 @@ INSTALLED_APPS = (
     'django.contrib.staticfiles',
     'verify',
     'django.contrib.admin',
+    #'south',
+    'dj_simple_sms',
+    
 
     # Uncomment the next line to enable the admin:
     # 'django.contrib.admin',
     # Uncomment the next line to enable admin documentation:
     # 'django.contrib.admindocs',
 )
+SMS_HANDLERS = (
+        'dj_simple_sms.sample_sms_handler',
+        'verify.views.sms_search',
+    )
 
 # A sample logging configuration. The only tangible logging
 # performed by this configuration is to send an email to

@@ -10,6 +10,8 @@ from django.http import HttpResponseRedirect
 from verify.models import Drug ,Food_water
 from django.core.exceptions import ObjectDoesNotExist
 
+import dj_simple_sms
+
 def home(request):
 	
         return render_to_response('verify/base.html',{})
@@ -77,13 +79,96 @@ def search(request,term):
 					exist='False'
 					c = Context({ 'search_product':search_product,'exist':exist})
 					return HttpResponse(t.render(c))
+"""					
+@csrf_exempt        
+def searchtryout(request,term):
+        message=[]
+        search_product=request.POST.get('search_product')
+         	
+			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
+				posts =Food_water.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message.append('Product Details: '+post.product_name+', '+ post.FDB_number+', '+post.manu_location)
+				return message
+				
 			
-        
-        
-        
+			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
+				posts =Drug.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message.append('Product Details: '+post.product_name+', '+ post.strength+', '+post.dosage_form)
+				print message
+				return message
+							
+				
+			else:
+				message = 'Product not Verified '
+				print message
+				return message					
+					
+					
+def sms(request,term):
+	message=''
+        search_product= sms.body
+        if (search_product==''):
+        	message="Please you sent blank Message"
+        	return message
+		
+        else:
+			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
+				posts =Food_water.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message.append('Product Details: '+post.product_name+', '+ post.FDB_number+', '+post.manu_location)
+				return message
+				
+			
+			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
+				posts =Drug.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message.append('Product Details: '+post.product_name+', '+ post.strength+', '+post.dosage_form)
+				print message
+				return message
+							
+				
+			else:
+				message = 'Product not Verified '
+				print message
+				return message		"""
 
 
         
+def sms_search(sms):
+        message=''
+        search_product= sms.body
+        if (search_product==''):
+        	message="Please you sent blank Message"
+
+		
+        else:
+			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
+				posts =Food_water.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message.append('Product Details: '+post.product_name+', '+ post.FDB_number+', '+post.manu_location)
+				
+				
+			
+			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
+				posts =Drug.objects.filter(product_name__iexact= search_product)
+				for post in posts:
+					message+= 'Product Details: '+post.product_name+', '+ post.strength+', '+post.dosage_form
+					message+='\n'
+				
+							
+				
+			else:
+				message = 'Product not Verified '
+				
+        response = dj_simple_sms.models.SMS(to_number=sms.from_number, from_number='verify', body=message)
+        response.send()
+  #  response.send()	
+  #  print "The search term is: %s" % sms.body
+#
+ #   response = SMS(to_number=sms.from_number, from_number='verify', body="no foods found")
+  #  response.send()
 
         
   
