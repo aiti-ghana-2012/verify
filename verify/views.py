@@ -10,11 +10,6 @@ from django.http import HttpResponseRedirect
 from verify.models import Drug ,Food_water
 from django.core.exceptions import ObjectDoesNotExist
 
-
-class searchForm(forms.Form):
-    search_product = forms.CharField()
-   
-
 def home(request):
 	
         return render_to_response('verify/base.html',{})
@@ -35,34 +30,54 @@ def search(request,term):
 		    return render_to_response(request.path,{})"""
         else:
 			
-			try:		
-				posts =Food_water.objects.get(product_name__iexact= search_product)
+			"""try:		
+				posts =Food_water.objects.filter(product_name__iexact= search_product)
+				print bool(posts)
 				argument = 'verify/search.html/'
 				exist='True'
 				t = loader.get_template(argument)
-				c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
+				c = Context({'posts':posts, 'search_product':search_product,'exist':exist})
 				return HttpResponse(t.render(c))
-				
-			except Food_water.DoesNotExist:
+			except ObjectDoesNotExist:
+	  			print 'jhkjhkjbkjb'
 	  			try:		
-					posts =Drug.objects.get(product_name__iexact= search_product)
+					posts =Drug.objects.filter(product_name__iexact= search_product)
 					argument = 'verify/search.html/'
 					exist='True'
 					t = loader.get_template(argument)
-					c = Context({'posts':posts,'term':term, 'search_product':search_product,'exist':exist})
+					c = Context({'posts':posts, 'search_product':search_product,'exist':exist})
 					return HttpResponse(t.render(c))
-				except Drug.DoesNotExist:
+				except ObjectDoesNotExist:
 		  			argument = 'verify/search.html/'
 					t = loader.get_template(argument)
 					exist='False'
-					c = Context({'term':term, 'search_product':search_product,'exist':exist})
-					return HttpResponse(t.render(c))
+					c = Context({ 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))"""
 	  			
 
-		
+			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
+				posts =Food_water.objects.filter(product_name__iexact= search_product)
+				print bool(posts)
+				argument = 'verify/search.html/'
+				exist='True'
+				t = loader.get_template(argument)
+				c = Context({'posts':posts, 'search_product':search_product,'exist':exist})
+				return HttpResponse(t.render(c))
+			else:
+				if(bool(Drug.objects.filter(product_name__iexact= search_product))):
+					posts =Drug.objects.filter(product_name__iexact= search_product)
+					argument = 'verify/search.html/'
+					exist='True'
+					t = loader.get_template(argument)
+					c = Context({'posts':posts, 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
+				else:
+					argument = 'verify/search.html/'
+					t = loader.get_template(argument)
+					exist='False'
+					c = Context({ 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
 			
-		
-		
         
         
         

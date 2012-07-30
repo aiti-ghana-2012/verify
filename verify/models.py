@@ -2,7 +2,7 @@ from django.db import models
 from django.contrib import admin
 
 class Drug(models.Model):
-	product_name = models.TextField(max_length=300)
+	product_name = models.TextField(db_index=True,max_length=300)
 	Generic_name = models.TextField(max_length=300,blank=True)
 	strength = models.TextField(max_length=300,blank=True)
 	dosage_form = models.TextField(max_length=300,blank=True)
@@ -18,7 +18,7 @@ class Drug(models.Model):
 	
 	
 class Food_water(models.Model):
-	product_name = models.TextField(max_length=500)
+	product_name = models.TextField(db_index=True,max_length=500)
 	FDB_number = models.TextField(max_length=15,blank=True)
 	manu_location = models.TextField(max_length=300,blank=True)
 	dosage_form = models.CharField(max_length=30,blank=True)
