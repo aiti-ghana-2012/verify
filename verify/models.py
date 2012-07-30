@@ -9,7 +9,7 @@ class Drug(models.Model):
 	applicant= models.TextField(max_length=300,blank=True)
 	manufacturer = models.TextField(max_length=300,blank=True)
 	local_agent = models.TextField(max_length=300,blank=True)
-	expiry_date = models.CharField(max_length=10,blank=True)
+	expiry_date = models.TextField(max_length=30,blank=True)
 	
 	
 	def __unicode__(self):
