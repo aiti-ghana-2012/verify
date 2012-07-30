@@ -5,7 +5,7 @@ class Drug(models.Model):
 	product_name = models.TextField(max_length=300)
 	Generic_name = models.TextField(max_length=300,blank=True)
 	strength = models.TextField(max_length=300,blank=True)
-	dosage_form = models.CharField(max_length=30,blank=True)
+	dosage_form = models.TextField(max_length=300,blank=True)
 	applicant= models.TextField(max_length=300,blank=True)
 	manufacturer = models.TextField(max_length=300,blank=True)
 	local_agent = models.TextField(max_length=300,blank=True)
