@@ -147,21 +147,24 @@ def sms_search(sms):
 			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
 				posts =Food_water.objects.filter(product_name__iexact= search_product)
 				for post in posts:
-					message.append('Product Details: '+post.product_name+', '+ post.FDB_number+', '+post.manu_location)
-				
+					message+='Product Details \n Name : '+post.product_name+'\n FDB number :'+ post.FDB_number+' \n Manufacturer : '+post.manu_location
+					
+					message+='\n'
+					
 				
 			
 			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
 				posts =Drug.objects.filter(product_name__iexact= search_product)
 				for post in posts:
-					message+= 'Product Details: '+post.product_name+', '+ post.strength+', '+post.dosage_form
+					message+= 'Product Details \n Name : '+post.product_name+'\n Strength  '+ post.strength+'\n Dosage '+post.dosage_form
 					message+='\n'
-				
+					
 							
 				
 			else:
 				message = 'Product not Verified '
 				
+        
         response = dj_simple_sms.models.SMS(to_number=sms.from_number, from_number='verify', body=message)
         response.send()
   #  response.send()	
