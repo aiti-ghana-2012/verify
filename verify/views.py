@@ -30,6 +30,11 @@ def search(request,term):
 		    print "fjhjhgjhgv"
 		    print request.path*2
 		    return render_to_response(request.path,{})"""
+
+
+
+
+	
         else:
 			
 			"""try:		
@@ -55,6 +60,23 @@ def search(request,term):
 					exist='False'
 					c = Context({ 'search_product':search_product,'exist':exist})
 					return HttpResponse(t.render(c))"""
+			if ('FDB' in search_product or 'fdb' in search_product):
+				print "fdb entered"
+				if(bool(Food_water.objects.filter(FDB_number__iexact= search_product))):
+					posts =Food_water.objects.filter(FDB_number__iexact= search_product)
+					print bool(posts)
+					argument = 'verify/search.html/'
+					exist='True'
+					t = loader.get_template(argument)
+					c = Context({'posts':posts, 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
+				else:
+					argument = 'verify/search.html/'
+					t = loader.get_template(argument)
+					exist='False'
+					c = Context({ 'search_product':search_product,'exist':exist})
+					return HttpResponse(t.render(c))
+
 	  			
 
 			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
@@ -143,7 +165,7 @@ def sms_search(sms):
         	message="Please you sent blank Message"
 
 		
-        else:
+        else:		
 			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
 				posts =Food_water.objects.filter(product_name__iexact= search_product)
 				for post in posts:
