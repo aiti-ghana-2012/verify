@@ -25,10 +25,14 @@ class Food_water(models.Model):
 	
 	def __unicode__(self):
 		return (self.product_name)
-class ProductAdmin(admin.ModelAdmin):
-    list_display=('product_name','FDB_number','manu_location','strength')
-    list_filter=('product_name','FDB_number')
-
-admin.site.register(Food_water)
-admin.site.register(Drug)
+class Food_waterAdmin(admin.ModelAdmin):
+    list_display=('product_name','FDB_number','manu_location')
+    search_fields=('product_name','FDB_number','manu_location')
+    list_filter=('FDB_number',)
+	
+class DrugAdmin(admin.ModelAdmin):
+	list_display=('Generic_name','dosage_form','manufacturer','local_agent','expiry_date')
+        search_fields=('product_name',)
+admin.site.register(Food_water,Food_waterAdmin)
+admin.site.register(Drug,DrugAdmin)
 

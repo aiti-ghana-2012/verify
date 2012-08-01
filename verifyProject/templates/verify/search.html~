@@ -53,6 +53,30 @@
             </ul>
           <div class="active item"></div>
         </div>
+			<div class="nav-collapse">
+			    <ul class="nav">
+			      <li class="active">
+				<a href="http://fblazer.blogspot.com" target= "_blank">Blog</a>
+				
+				</li>
+			    </ul>
+			  </div><!--/.nav-collapse -->
+			<div class="nav-collapse">
+			    <ul class="nav">
+			      <li class="active">
+				<a href="http://mayakiincprofile.blogspot.com/" target= "_blank">About us</a>
+				
+				</li>
+			    </ul>
+			  </div><!--/.nav-collapse -->
+                          <div class="nav-collapse">
+			    <ul class="nav">
+			      <li class="active">
+				<a href="http://fblazer.blogspot.com" target= "_blank">Help and Contact Us</a>
+				
+				</li>
+			    </ul>
+			  </div><!--/.nav-collapse -->
       </div>
     </div>
 
@@ -137,6 +161,7 @@ May be <b style="color:#FF66FF"> FAKE </b>call FDB on 0541111111 or check spelli
 		Local Agent:{{post.local_agent}} 
 		</br>
 		Expiry Date:{{post.expiry_date}}
+		</br>
 		</br>
 	
 		{%endif%}

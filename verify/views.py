@@ -60,7 +60,7 @@ def search(request,term):
 					exist='False'
 					c = Context({ 'search_product':search_product,'exist':exist})
 					return HttpResponse(t.render(c))"""
-			if ('FDB' in search_product or 'fdb' in search_product):
+			if ('fdb' in search_product.lower()):
 				print "fdb entered"
 				if(bool(Food_water.objects.filter(FDB_number__iexact= search_product))):
 					posts =Food_water.objects.filter(FDB_number__iexact= search_product)
@@ -160,31 +160,33 @@ def sms(request,term):
         
 def sms_search(sms):
         message=''
-        search_product= sms.body
+        search_product= sms.body.strip()
         if (search_product==''):
         	message="Please you sent blank Message"
 
 		
         else:		
-			if(bool(Food_water.objects.filter(product_name__iexact= search_product))):
-				posts =Food_water.objects.filter(product_name__iexact= search_product)
+			if ('fdb' in search_product.lower()):
+				if(bool(Food_water.objects.filter(FDB_number__iexact= search_product))):
+					posts =Food_water.objects.filter(FDB_number__iexact= search_product)
+					for post in posts:
+						message+='Product Details \n Name : '+post.product_name+'\n FDB number :'+ post.FDB_number+' \n Manufacturer : '+post.manu_location
+						message+='\n'
+				else:
+					message = search_product+'  MAY BE FAKE call FDB on \n 0302233200 or 0302229261'
+					
+			elif(bool(Food_water.objects.filter(product_name__iexact= search_product))):
+				posts =Food_water.objects.filter(product_name__iexact= search_product)	
 				for post in posts:
 					message+='Product Details \n Name : '+post.product_name+'\n FDB number :'+ post.FDB_number+' \n Manufacturer : '+post.manu_location
-					
 					message+='\n'
-					
-				
-			
 			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
 				posts =Drug.objects.filter(product_name__iexact= search_product)
 				for post in posts:
 					message+= 'Product Details \n Name : '+post.product_name+'\n Strength  '+ post.strength+'\n Dosage '+post.dosage_form
 					message+='\n'
-					
-							
-				
 			else:
-				message = 'Product not Verified '
+				message = search_product+'  MAY BE FAKE call FDB on \n 0302233200 or 0302229261'
 				
         
         response = dj_simple_sms.models.SMS(to_number=sms.from_number, from_number='verify', body=message)
