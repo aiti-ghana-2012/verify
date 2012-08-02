@@ -162,7 +162,7 @@ def sms_search(sms):
         message=''
         search_product= sms.body.strip()
         if (search_product==''):
-        	message="Please you sent blank Message"
+        	message="You sent blank message\n Please check and try again.\nVeryFi\nBuy with confidence."
 
 		
         else:		
@@ -183,7 +183,7 @@ def sms_search(sms):
 			elif(bool(Drug.objects.filter(product_name__iexact= search_product))):
 				posts =Drug.objects.filter(product_name__iexact= search_product)
 				for post in posts:
-					message+= 'Product Details \n Name : '+post.product_name+'\n Strength  '+ post.strength+'\n Dosage '+post.dosage_form
+					message+= 'Product Details \n Name: '+post.product_name+'\n Strength: '+ post.strength+'\n Dosage: '+post.dosage_form +'\n Local Agent: '+post.local_agent #+'\n Expire Date: '+post.expiry_date
 					message+='\n'
 			else:
 				message = search_product+'  MAY BE FAKE call FDB on \n 0302233200 or 0302229261'
