@@ -28,7 +28,7 @@ class Food_water(models.Model):
 class Food_waterAdmin(admin.ModelAdmin):
     list_display=('product_name','FDB_number','manu_location')
     search_fields=('product_name','FDB_number','manu_location')
-    list_filter=('FDB_number',)
+    #list_filter=('FDB_number',)
 	
 class DrugAdmin(admin.ModelAdmin):
 	list_display=('Generic_name','dosage_form','manufacturer','local_agent','expiry_date')

@@ -12,6 +12,7 @@ urlpatterns = patterns('',
     # url(r'^verifyProject/', include('verifyProject.foo.urls')),
     url(r'^verify/', include('verify.urls')),
     url(r'^verify/search/(?P<term>.*?)$', 'verify.views.search'),
+    url(r'^$', 'verify.views.home'),
 
 
     # Uncomment the admin/doc line below to enable admin documentation:

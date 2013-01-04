@@ -16,6 +16,18 @@
 			padding-top: 60px;
 			padding-bottom: 40px;
 		      }
+
+			#instructions {
+			margin-left:6cm;
+			margin-right:6cm;
+			background-color:pink;
+				
+
+
+
+
+			}
+			
 		    </style>
 		    <link href="../assets/css/bootstrap-responsive.css" rel="stylesheet">
 
@@ -44,7 +56,7 @@
 			    <span class="icon-bar"></span>
 			    <span class="icon-bar"></span>
 			  </a>
-			  <a class="brand" href="#">VeryFi</a>
+			  <a class="brand" href="/verify">VeryFi</a>
 			  <div class="btn-group pull-right"> 
 			  </div>
 			  <div class="nav-collapse">
@@ -87,12 +99,19 @@
 
 	<body>
 
+
+
 	<div class="container">   		
      		<div>
-        	<center><div class="active item"><img src='/static/bootstrap/img/verify_beta_main.png'></div></center>
+        	<center><div class="active item" style="margin-right:2.5cm" ><img src='/static/bootstrap/img/verify_beta_main.png' width="600" height="270"></div></center>
 	        </div>
-
-     
+		
+	<div id = instructions>
+	<p>
+	Enter The Full Name or The Food and Drugs Board Numbr of The Product You Wish To Authenticate in the Search Box below.FOR More Info Click on The Help Above.
+	</p>
+		
+	</div>
 		<form action="/verify/search/" method="post">
 		
 	 	<div class="control-group">
